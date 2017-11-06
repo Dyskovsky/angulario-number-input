@@ -1,0 +1,68 @@
+$arrow-color: #666666;
+$arrow-color-hover: #13026d;
+$arrow-color-disabled: #aaaaaa;
+$arrow-margin: 5px;
+$arrow-width: 10px;
+$arrow-height: 6px;
+
+input[type=number] { 
+	appearance: textfield;
+	margin: 0; 
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+
+.arrows-container {
+	display:  grid;
+	position: absolute;
+	right: 12px;
+	top: 0;
+	//bottom: 0;
+	//height: 100%;
+	
+	.arrow {
+		width: 0;
+		height: 0;
+		border-left: $arrow-width*0.5 solid transparent; 
+		border-right: $arrow-width*0.5 solid transparent;
+		cursor: pointer;
+		
+		&-up {
+			border-bottom: $arrow-height solid $arrow-color;
+			margin-bottom: $arrow-margin;
+			
+			&:hover {
+				border-bottom: $arrow-height solid $arrow-color-hover;
+			}
+		}
+		
+		&-down {
+			border-top: $arrow-height solid $arrow-color;
+			margin-top: $arrow-margin;
+	
+			&:hover {
+				border-top: $arrow-height solid $arrow-color-hover;		
+			}
+		}
+	}
+}
+
+.input-container {
+	position: relative;
+
+	input[disabled] + .arrows-container > .arrow{
+		cursor: default;
+
+		&-up {
+			border-bottom: $arrow-height solid $arrow-color-disabled;
+		}
+
+		&-down {
+			border-top: $arrow-height solid $arrow-color-disabled;			
+		}
+	}
+}
+
