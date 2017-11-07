@@ -1,6 +1,6 @@
 {
   "name": "angulario-number-input",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "src/lib/index.ts",
   "jsnext:main": "src/lib/index.ts",
@@ -16,7 +16,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Dyskovsky/angulario-number-input"
-},
+  },
   "private": false,
   "dependencies": {
     "@angular/animations": "^4.0.0",
