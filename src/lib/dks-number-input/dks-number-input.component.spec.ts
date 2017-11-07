@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgNumberInputComponent } from './ng-number-input.component';
+import { DksNumberInputComponent } from './ng-number-input.component';
 
-describe('NgNumberInputComponent', () => {
-  let component: NgNumberInputComponent;
-  let fixture: ComponentFixture<NgNumberInputComponent>;
+describe('DksNumberInputComponent', () => {
+  let component: DksNumberInputComponent;
+  let fixture: ComponentFixture<DksNumberInputComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgNumberInputComponent ]
+      declarations: [ DksNumberInputComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgNumberInputComponent);
+    fixture = TestBed.createComponent(DksNumberInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

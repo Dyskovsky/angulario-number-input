@@ -1,1 +1,1 @@
-export * from './ng-number-input.module';
+export * from './dks-number-input.module';

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgNumberInputComponent } from './ng-number-input.component';
+import { DksNumberInputComponent } from './dks-number-input.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -9,10 +9,10 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   declarations: [
-    NgNumberInputComponent
+    DksNumberInputComponent
   ],
   exports: [
-    NgNumberInputComponent
+    DksNumberInputComponent
   ]
 })
-export class NgNumberInputModule { }
+export class DksNumberInputModule { }

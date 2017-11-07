@@ -19,12 +19,12 @@ function dispatchFakeEvent(node: Node) {
 
 
 @Component({
-  selector: 'ng-number-input',
-  templateUrl: './ng-number-input.component.html',
-  styleUrls: ['./ng-number-input.component.scss'],
+  selector: 'dks-number-input',
+  templateUrl: './dks-number-input.component.html',
+  styleUrls: ['./dks-number-input.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class NgNumberInputComponent implements OnInit, AfterContentInit {
+export class DksNumberInputComponent implements OnInit, AfterContentInit {
 
   private inputElement: any;
   @ViewChild('inputContainer') inputContainer;
