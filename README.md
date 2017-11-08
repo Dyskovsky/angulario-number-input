@@ -15,7 +15,7 @@ Download source and run `ng serve`, then navigate to `http://localhost:4200/`.
 
 ## Usage
 ```javascript
-import { DksNumberInputModule } from 'dks-number-input';
+import { DksNumberInputModule } from 'angulario-number-input';
 
 @NgModule({
   imports: [ DksNumberInputModule ],
