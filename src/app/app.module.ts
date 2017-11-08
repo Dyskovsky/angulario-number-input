@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
-import { DksNumberInputModule } from '../lib/dks-number-input';
+import { DksNumberInputModule } from '../dks-number-input';
 
 @NgModule({
   declarations: [

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DksNumberInputComponent } from './ng-number-input.component';
+import { DksNumberInputComponent } from './dks-number-input.component';
 
 describe('DksNumberInputComponent', () => {
   let component: DksNumberInputComponent;
