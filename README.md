@@ -25,6 +25,6 @@ import { DksNumberInputModule } from 'angulario-number-input';
 
 ```html
 <dks-number-input>
-	<input/>    
+	<input type="number"/>    
 </dks-number-input>
 ```

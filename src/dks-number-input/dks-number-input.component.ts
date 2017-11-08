@@ -41,7 +41,11 @@ export class DksNumberInputComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit() {
-  const elements = Array.from(this.inputContainer.nativeElement.childNodes);
-  this.inputElement = elements.find( element => (<any>element).tagName === 'INPUT');
+    const elements = Array.from(this.inputContainer.nativeElement.childNodes);
+    this.inputElement = elements.find( element => (<any>element).tagName === 'INPUT');
+
+    if (this.inputElement.type !== 'number') {
+      throw TypeError(`DskNumberInput: input must have type="number" attribute`);
+    }
   }
 }
