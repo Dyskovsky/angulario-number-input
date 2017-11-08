@@ -36,13 +36,17 @@ export class DksNumberInputComponent implements OnInit, AfterContentInit {
   }
 
   public stepUp(): void {
-    this.inputElement.stepUp();
-    dispatchFakeEvent(this.inputElement);
+    if (!this.inputElement.disabled) {
+      this.inputElement.stepUp();
+      dispatchFakeEvent(this.inputElement);
+    }
   }
 
   public stepDown(): void {
-    this.inputElement.stepDown();
-    dispatchFakeEvent(this.inputElement);
+    if (!this.inputElement.disabled) {
+      this.inputElement.stepDown();
+      dispatchFakeEvent(this.inputElement);
+    }
   }
 
   ngAfterContentInit() {
