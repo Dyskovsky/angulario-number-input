@@ -2,9 +2,9 @@
   "name": "angulario-number-input",
   "version": "0.1.0",
   "license": "MIT",
-  "main": "src/lib/index.ts",
-  "jsnext:main": "src/lib/index.ts",
-  "module": "src/lib.ts",
+  "main": "src/dks-number-input/index.ts",
+  "jsnext:main": "src/dks-number-input/index.ts",
+  "module": "src/dks-number-input/index.ts",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
