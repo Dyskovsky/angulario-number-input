@@ -9,4 +9,5 @@ export class AppComponent {
   title = 'app';
   digit = 0;
   digit2 = 0;
+  digit3 = 0;
 }

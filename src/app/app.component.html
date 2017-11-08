@@ -1,11 +1,26 @@
-<dks-number-input>
-  <input id="btn1" type="number" [(ngModel)]="digit" step="0.4"/>    
-</dks-number-input>
 
-<dks-number-input>
-    <input id="btn2" type="number" [(ngModel)]="digit2" step="1"/>    
+<div>
+  Large number input
+  <dks-number-input>
+    <input id="btn1" type="number" [(ngModel)]="digit" step="0.4"/>    
   </dks-number-input>
+</div>
 
+<div>
+  simple number input
+  <dks-number-input>
+      <input id="btn2" type="number" [(ngModel)]="digit2" step="1"/>    
+    </dks-number-input>
+</div>
+
+<div>
+  disabled number input
   <dks-number-input>
     <input id="btn3" type="number" [(ngModel)]="digit2" step="1" disabled/>    
   </dks-number-input>
+</div>
+
+<div>
+  classic number input
+  <input type="number" [(ngModel)]="digit3"/>
+</div>
