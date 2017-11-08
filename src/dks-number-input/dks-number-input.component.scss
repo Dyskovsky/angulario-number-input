@@ -5,25 +5,13 @@ $arrow-margin: 5px;
 $arrow-width: 10px;
 $arrow-height: 6px;
 
-input[type=number] { 
-	appearance: textfield;
-	margin: 0; 
-}
-
-input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-
-.arrows-container {
+.dks-arrows-container {
 	display:  grid;
 	position: absolute;
 	right: 12px;
 	top: 0;
-	//bottom: 0;
-	//height: 100%;
 	
-	.arrow {
+	.dks-arrow {
 		width: 0;
 		height: 0;
 		border-left: $arrow-width*0.5 solid transparent; 
@@ -50,10 +38,19 @@ input[type=number]::-webkit-inner-spin-button {
 	}
 }
 
-.input-container {
+.dks-input-container {
 	position: relative;
+	
+	input[type=number] { 
+		appearance: textfield;
+		margin: 0; 
+	}
+	
+	input[type=number]::-webkit-inner-spin-button {
+	  -webkit-appearance: none;
+	}
 
-	input[disabled] + .arrows-container > .arrow{
+	input[disabled] + .dks-arrows-container > .dks-arrow{
 		cursor: default;
 
 		&-up {
