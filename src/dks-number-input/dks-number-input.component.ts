@@ -1,22 +1,13 @@
 import {
   Component,
   OnInit,
-  Input,
-  Output,
-  EventEmitter,
   ViewChild,
   AfterContentInit,
-  Renderer2,
-  ElementRef,
-  ChangeDetectorRef,
   ViewEncapsulation } from '@angular/core';
 
 function dispatchFakeEvent(node: Node) {
   node.dispatchEvent(new Event('input'));
 }
-
-// You can use the .markForCheck or event the .tick methods to force change-detection.
-
 
 @Component({
   selector: 'dks-number-input',
@@ -29,7 +20,7 @@ export class DksNumberInputComponent implements OnInit, AfterContentInit {
   private inputElement: any;
   @ViewChild('inputContainer') inputContainer;
 
-  constructor( private renderer: Renderer2, private element: ElementRef, private ref: ChangeDetectorRef ) {
+  constructor() {
   }
 
   ngOnInit() {
@@ -52,7 +43,5 @@ export class DksNumberInputComponent implements OnInit, AfterContentInit {
   ngAfterContentInit() {
   const elements = Array.from(this.inputContainer.nativeElement.childNodes);
   this.inputElement = elements.find( element => (<any>element).tagName === 'INPUT');
-    console.log(this.inputElement);
-    console.log(this.inputContainer);//tagName
   }
 }
