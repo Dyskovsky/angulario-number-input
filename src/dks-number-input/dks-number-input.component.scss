@@ -41,13 +41,17 @@ $arrow-height: 6px;
 .dks-input-container {
 	position: relative;
 	
-	input[type=number] { 
-		appearance: textfield;
-		margin: 0; 
-	}
-	
-	input[type=number]::-webkit-inner-spin-button {
-	  -webkit-appearance: none;
+	input {
+		&[type=number] { 
+			min-height: 23px;
+			appearance: textfield;
+			margin: 0; 
+			
+			&::-webkit-inner-spin-button {
+			  -webkit-appearance: none;
+			}
+		}
+		
 	}
 
 	input[disabled] + .dks-arrows-container > .dks-arrow{
