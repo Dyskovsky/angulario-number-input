@@ -3,7 +3,8 @@ import {
   OnInit,
   ViewChild,
   AfterContentInit,
-  ViewEncapsulation } from '@angular/core';
+  ViewEncapsulation,
+  ElementRef } from '@angular/core';
 
 function dispatchFakeEvent(node: Node) {
   node.dispatchEvent(new Event('input'));
@@ -11,14 +12,21 @@ function dispatchFakeEvent(node: Node) {
 
 @Component({
   selector: 'dks-number-input',
-  templateUrl: './dks-number-input.component.html',
+  template:
+  `<span #inputContainer class="dks-input-container">
+    <ng-content></ng-content>
+    <span class="dks-arrows-container">
+      <span class="dks-arrow dks-arrow-up" (click)="stepUp();"></span>
+      <span class="dks-arrow dks-arrow-down" (click)="stepDown()"></span>
+    </span>
+  </span>`,
   styleUrls: ['./dks-number-input.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class DksNumberInputComponent implements OnInit, AfterContentInit {
 
   private inputElement: any;
-  @ViewChild('inputContainer') inputContainer;
+  @ViewChild('inputContainer') inputContainer: ElementRef;
 
   constructor() {
   }

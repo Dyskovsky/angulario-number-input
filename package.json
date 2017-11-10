@@ -2,20 +2,23 @@
   "name": "angulario-number-input",
   "version": "0.1.2",
   "license": "MIT",
-  "main": "src/dks-number-input/index.ts",
-  "jsnext:main": "src/dks-number-input/index.ts",
-  "module": "src/dks-number-input/index.ts",
+  "main": "dist/src/dks-number-input/index.js",
+  "jsnext:main": "dist/src/dks-number-input/index.js",
+  "module": "dist/src/dks-number-input/index.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-lib": "tsc -p src/tsconfig.lib.json",
+    "preversion": "git pull -r",
+    "postversion": "git push --tags",
+    "publish-lib": "npm run build-lib && npm publish ./dist"
   },
   "files": [
-    "index.ts",
-    "src/dks-number-input"
+    "dist/src/dks-number-input"
   ],
   "repository": {
     "type": "git",
