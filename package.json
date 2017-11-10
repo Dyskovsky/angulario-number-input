@@ -1,6 +1,6 @@
 {
   "name": "angulario-number-input",
-  "version": "0.1.2",
+  "version": "0.2.0-0",
   "license": "MIT",
   "main": "dist/src/dks-number-input/index.js",
   "jsnext:main": "dist/src/dks-number-input/index.js",
