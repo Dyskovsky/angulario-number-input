@@ -18,7 +18,7 @@
     "build-lib": "gulp inline-templates && ngc -p tsconfig-lib.json",
     "preversion": "git pull -r",
     "postversion": "git push --tags",
-    "publish-lib": "npm run build-lib && npm publish ./dist"
+    "publish-lib": "npm run build-lib && npm publish"
   },
   "files": [
     "dist/*"
