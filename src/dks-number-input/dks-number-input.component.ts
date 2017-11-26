@@ -12,14 +12,7 @@ function dispatchFakeEvent(node: Node) {
 
 @Component({
   selector: 'dks-number-input',
-  template:
-  `<span #inputContainer class="dks-input-container">
-    <ng-content></ng-content>
-    <span class="dks-arrows-container">
-      <span class="dks-arrow dks-arrow-up" (click)="stepUp();"></span>
-      <span class="dks-arrow dks-arrow-down" (click)="stepDown()"></span>
-    </span>
-  </span>`,
+  templateUrl: 'dks-number-input.component.html',
   styleUrls: ['./dks-number-input.component.scss'],
   encapsulation: ViewEncapsulation.None
 })

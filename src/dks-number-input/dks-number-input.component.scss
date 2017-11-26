@@ -44,6 +44,8 @@ $arrow-height: 6px;
 	input {
 		&[type=number] { 
 			min-height: 23px;
+			-webkit-appearance: textfield;
+			-moz-appearance: textfield;
 			appearance: textfield;
 			margin: 0; 
 			
