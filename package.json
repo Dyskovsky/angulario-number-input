@@ -27,6 +27,12 @@
     "type": "git",
     "url": "https://github.com/Dyskovsky/angulario-number-input"
   },
+  "keywords": [
+    "Angular",
+    "input",
+    "number",
+    "material"
+  ],
   "private": false,
   "dependencies": {},
   "devDependencies": {

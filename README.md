@@ -1,7 +1,5 @@
 # angulario-number-input
 
-## WIP (be aware this is alpha version!)
-
 <img src="demo.png" align="center" />
 
 ## Run demo
