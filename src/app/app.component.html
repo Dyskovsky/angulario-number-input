@@ -1,29 +1,39 @@
 <h1>
-  DdsNumberInput demo
+  dks-number-input demo
 </h1>
 
 <div>
-  Large number input
+  <h4>
+    Large dks-number-input
+  </h4>
+  step = 0.5 
   <dks-number-input>
-    <input id="btn1" type="number" [(ngModel)]="digit" step="0.4"/>    
+    <input id="btn1" type="number" [(ngModel)]="largeInputVariable" step="0.5"/>    
   </dks-number-input>
 </div>
 
 <div>
-  simple number input
+  <h4>
+    simple dks-number-input
+  </h4>
+  step = 1
   <dks-number-input>
-      <input id="btn2" type="number" [(ngModel)]="digit2" step="1"/>    
+      <input id="btn2" type="number" [(ngModel)]="simpleInputVariable" step="1"/>    
     </dks-number-input>
 </div>
 
 <div>
-  disabled number input
+  <h4>
+    disabled dks-number-input
+  </h4>
   <dks-number-input>
-    <input id="btn3" type="number" [(ngModel)]="digit2" step="1" disabled/>    
+    <input id="btn3" type="number" [(ngModel)]="disabledInputVariable" disabled/>    
   </dks-number-input>
 </div>
 
 <div>
-  classic number input
-  <input type="number" [(ngModel)]="digit3"/>
+  <h4>
+    classic number input
+  </h4>
+  <input type="number" [(ngModel)]="classicInputVariable"/>
 </div>

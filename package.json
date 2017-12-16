@@ -19,7 +19,8 @@
     "build-lib": "gulp inline-templates && ngc -p tsconfig-lib.json",
     "preversion": "git pull -r",
     "postversion": "git push --tags",
-    "publish-lib": "npm run build-lib && npm publish"
+    "publish-lib": "npm run build-lib && npm publish",
+    "deploy": "ng build --prod --base-href \"/angulario-number-input/\"  && ngh"
   },
   "files": [
     "dist/*"
@@ -49,6 +50,7 @@
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "^6.0.92",
+    "angular-cli-ghpages": "^0.5.2",
     "codelyzer": "~4.0.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",

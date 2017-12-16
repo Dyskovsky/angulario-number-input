@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  digit = 0;
-  digit2 = 0;
-  digit3 = 0;
+  largeInputVariable = 0;
+  simpleInputVariable = 0;
+  disabledInputVariable = 0;
+  classicInputVariable = 0;
 }
