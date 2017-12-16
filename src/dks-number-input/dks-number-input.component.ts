@@ -21,10 +21,35 @@ export class DksNumberInputComponent implements OnInit, AfterContentInit {
   private inputElement: any;
   @ViewChild('inputContainer') inputContainer: ElementRef;
 
+  private validate() {
+
+    function inputHasNumberAttr(element) {
+      return element.type === 'number';
+    }
+
+    if (!this.inputElement) {
+     throw ReferenceError(`[DksNumberInput] place input element inside dks-number-input!`);
+    }
+
+    if (!inputHasNumberAttr(this.inputElement)) {
+     throw TypeError(`DskNumberInput: input must have type="number" attribute`);
+    }
+  }
+
+  private findInputElement() {
+    const elements = Array.from(this.inputContainer.nativeElement.childNodes);
+    return elements.find( element => (<any>element).tagName === 'INPUT');
+  }
+
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  public ngAfterContentInit() {
+    this.inputElement = this.findInputElement();
+    this.validate();
   }
 
   public stepUp(): void {
@@ -41,16 +66,8 @@ export class DksNumberInputComponent implements OnInit, AfterContentInit {
     }
   }
 
-  ngAfterContentInit() {
-    const elements = Array.from(this.inputContainer.nativeElement.childNodes);
-    this.inputElement = elements.find( element => (<any>element).tagName === 'INPUT');
-
-      if (this.inputElement) {
-        if (this.inputElement.type !== 'number') {
-          throw TypeError(`DskNumberInput: input must have type="number" attribute`);
-        }
-      } else {
-        console.error(`Place input element inside dks-number-input!`);
-      }
+  // only for tests!!!
+  public getInputElement() {
+    return this.inputElement;
   }
 }
