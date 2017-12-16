@@ -1,5 +1,13 @@
 # angulario-number-input
 
+[![Build Status](https://travis-ci.org/Dyskovsky/angulario-number-input.svg?branch=master)](https://travis-ci.org/Dyskovsky/angulario-number-input)
+[![dependencies Status](https://david-dm.org/dyskovsky/angulario-number-input/status.svg)](https://david-dm.org/dyskovsky/angulario-number-input)
+[![devDependencies Status](https://david-dm.org/dyskovsky/angulario-number-input/dev-status.svg)](https://david-dm.org/dyskovsky/angulario-number-input?type=dev)
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://github.com/dyskovsky/angulario-number-input)
+[![npm](https://img.shields.io/npm/l/express.svg)](https://github.com/dyskovsky/angulario-number-input)
+
+
+
 <img src="demo.png" align="center" />
 
 ## Run demo
