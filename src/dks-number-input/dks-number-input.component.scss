@@ -1,68 +1,66 @@
 $arrow-color: #666666;
 $arrow-color-hover: #13026d;
 $arrow-color-disabled: #aaaaaa;
-$arrow-margin: 5px;
 $arrow-width: 10px;
 $arrow-height: 6px;
 
 .dks-arrows-container {
-	display:  grid;
 	position: absolute;
 	right: 12px;
 	top: 0;
+	bottom: 0;
+}
+
+.dks-single-arrow-container {
+	display: flex;
+	height: 50%;
+	align-items: center;
+}
 	
-	.dks-arrow {
-		width: 0;
-		height: 0;
-		border-left: $arrow-width*0.5 solid transparent; 
-		border-right: $arrow-width*0.5 solid transparent;
-		cursor: pointer;
-		
-		&-up {
-			border-bottom: $arrow-height solid $arrow-color;
-			margin-bottom: $arrow-margin;
-			
-			&:hover {
-				border-bottom: $arrow-height solid $arrow-color-hover;
-			}
-		}
-		
-		&-down {
-			border-top: $arrow-height solid $arrow-color;
-			margin-top: $arrow-margin;
+.dks-arrow {
+	width: 0;
+	height: 0;
+	border-left: $arrow-width*0.5 solid transparent; 
+	border-right: $arrow-width*0.5 solid transparent;
+	cursor: pointer;
 	
-			&:hover {
-				border-top: $arrow-height solid $arrow-color-hover;		
-			}
-		}
+	&-up {
+		border-bottom: $arrow-height solid $arrow-color;
+	}
+	&-up:hover {
+		border-bottom: $arrow-height solid $arrow-color-hover;
+	}
+	
+	&-down {
+		border-top: $arrow-height solid $arrow-color;
+	}
+	&-down:hover {
+		border-top: $arrow-height solid $arrow-color-hover;		
 	}
 }
 
 .dks-input-container {
 	position: relative;
+	display: inline-flex;
 	
-	input {
-		&[type=number] { 
-			min-height: 23px;
-			-webkit-appearance: textfield;
-			-moz-appearance: textfield;
-			appearance: textfield;
-			margin: 0; 
-			
-			&::-webkit-inner-spin-button {
-			  -webkit-appearance: none;
-			}
-		}
+	input[type=number] { 
+		min-height: 23px;
+		-webkit-appearance: textfield;
+		-moz-appearance: textfield;
+		appearance: textfield;
+		margin: 0; 
 		
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+		}
 	}
 
-	input[disabled] + .dks-arrows-container > .dks-arrow{
+	input[disabled] + .dks-arrows-container .dks-arrow{
 		cursor: default;
 
 		&-up {
 			border-bottom: $arrow-height solid $arrow-color-disabled;
 		}
-
 		&-down {
 			border-top: $arrow-height solid $arrow-color-disabled;			
 		}
