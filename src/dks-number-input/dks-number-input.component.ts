@@ -23,7 +23,7 @@ export class DksNumberInputComponent implements OnInit, AfterContentInit {
 
   private validate() {
 
-    function inputHasNumberAttr(element) {
+    function inputHasNumberAttr(element: any) {
       return element.type === 'number';
     }
 
