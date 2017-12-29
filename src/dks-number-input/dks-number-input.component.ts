@@ -66,6 +66,10 @@ export class DksNumberInputComponent implements OnInit, AfterContentInit {
     }
   }
 
+  public isDisabled(): boolean {
+    return this.inputElement.disabled;
+  }
+
   // only for tests!!!
   public getInputElement() {
     return this.inputElement;
