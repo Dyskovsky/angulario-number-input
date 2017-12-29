@@ -11,4 +11,5 @@ export class AppComponent {
   simpleInputVariable = 0;
   disabledInputVariable = 0;
   classicInputVariable = 0;
+  styledInputVariable = 0;
 }

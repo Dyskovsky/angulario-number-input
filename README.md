@@ -7,6 +7,7 @@
 [![npm](https://img.shields.io/npm/l/express.svg)](https://github.com/dyskovsky/angulario-number-input)
 
 
+> Material styled number input for Angular
 
 <img src="demo.png" align="center" />
 
@@ -31,6 +32,23 @@ import { DksNumberInputModule } from 'angulario-number-input';
 
 ```html
 <dks-number-input>
-	<input type="number"/>    
+  <input type="number"/>    
 </dks-number-input>
+```
+
+## Custom theming example
+```css
+.dks-arrow {
+  color: red;
+  border-width: 4px;
+  margin-right: 10px;
+}
+
+.dks-arrow:hover {
+  color: blue;
+}
+
+.dks-arrow.disabled {
+  color: gray;
+}
 ```

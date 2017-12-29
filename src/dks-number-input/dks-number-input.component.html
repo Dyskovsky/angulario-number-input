@@ -4,10 +4,10 @@
 	
 	<span class="dks-arrows-container">
     	<span class="dks-single-arrow-container">
-			<span class="dks-arrow dks-arrow-up" (click)="stepUp();"></span>
+			<span class="dks-arrow dks-arrow-up" [ngClass]="{'disabled': inputElement.disabled}" style="border-top: none" (click)="stepUp()"></span>
 		</span>
 		<span class="dks-single-arrow-container">
-			<span class="dks-arrow dks-arrow-down" (click)="stepDown()"></span>
+			<span class="dks-arrow dks-arrow-down" [ngClass]="{'disabled': inputElement.disabled}" style="border-bottom: none" (click)="stepDown()"></span>
 		</span>
     </span>
 

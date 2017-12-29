@@ -13,3 +13,17 @@ h1 {
 h1, h4 {
  color: #444444;
 }
+
+#custom-input input {
+	height: 34px;
+}
+
+#custom-input .dks-arrow {
+	color: #004caf;
+	border-width: 7px;
+	margin-right: 8px;
+}
+
+#custom-input .dks-arrow:hover {
+	color: #a2f7e1;
+}

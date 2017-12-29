@@ -4,9 +4,26 @@ $arrow-color-disabled: #aaaaaa;
 $arrow-width: 10px;
 $arrow-height: 6px;
 
+.dks-input-container {
+	position: relative;
+	display: inline-flex;
+	
+	input[type=number] { 
+		min-height: 23px;
+		margin: 0; 
+		-webkit-appearance: textfield;
+		-moz-appearance: textfield;
+		appearance: textfield;
+		
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+		}
+	}
+}
+
 .dks-arrows-container {
 	position: absolute;
-	right: 12px;
+	right: 0;
 	top: 0;
 	bottom: 0;
 }
@@ -20,50 +37,21 @@ $arrow-height: 6px;
 .dks-arrow {
 	width: 0;
 	height: 0;
+	padding: 0 !important;
+	margin-right: 12px;
 	border-left: $arrow-width*0.5 solid transparent; 
 	border-right: $arrow-width*0.5 solid transparent;
+	border-bottom: $arrow-height solid currentColor;
+	border-top: $arrow-height solid currentColor;
+	color: $arrow-color;
 	cursor: pointer;
-	
-	&-up {
-		border-bottom: $arrow-height solid $arrow-color;
-	}
-	&-up:hover {
-		border-bottom: $arrow-height solid $arrow-color-hover;
-	}
-	
-	&-down {
-		border-top: $arrow-height solid $arrow-color;
-	}
-	&-down:hover {
-		border-top: $arrow-height solid $arrow-color-hover;		
-	}
 }
 
-.dks-input-container {
-	position: relative;
-	display: inline-flex;
-	
-	input[type=number] { 
-		min-height: 23px;
-		-webkit-appearance: textfield;
-		-moz-appearance: textfield;
-		appearance: textfield;
-		margin: 0; 
-		
-		&::-webkit-inner-spin-button {
-			-webkit-appearance: none;
-		}
-	}
-
-	input[disabled] + .dks-arrows-container .dks-arrow{
-		cursor: default;
-
-		&-up {
-			border-bottom: $arrow-height solid $arrow-color-disabled;
-		}
-		&-down {
-			border-top: $arrow-height solid $arrow-color-disabled;			
-		}
-	}
+.dks-arrow:hover {
+	color: $arrow-color-hover
 }
 
+.dks-arrow.disabled, .dks-arrow.disabled:hover {
+	cursor: default;
+	color: $arrow-color-disabled;
+}
