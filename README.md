@@ -11,9 +11,7 @@
 
 <img src="demo.png" align="center" />
 
-## Run demo
-
-Download source and run `ng serve`, then navigate to `http://localhost:4200/`. 
+Online example https://dyskovsky.github.io/angulario-number-input
 
 ## Install
 
