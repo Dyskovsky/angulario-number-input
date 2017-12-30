@@ -18,10 +18,15 @@
     "gulp": "gulp inline-templates",
     "build-lib": "gulp inline-templates && ngc -p tsconfig-lib.json",
     "preversion": "git pull -r",
-    "postversion": "git push --tags",
+    "postversion": "git push && git push --tags",
     "publish-lib": "npm run build-lib && npm publish",
-    "deploy": "ng build --prod --base-href \"/angulario-number-input/\"  && ngh"
+    "deploy": "ng build --prod --base-href \"/angulario-number-input/\"  && ngh",
+    "build:prod": "ng build --prod"
   },
+  "precommit": [
+    "test-ci",
+    "build:prod"
+  ],
   "files": [
     "dist/*"
   ],
@@ -63,6 +68,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "^1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "pre-commit": "^1.2.2",
     "protractor": "~5.1.2",
     "puppeteer": "^0.13.0",
     "ts-node": "~3.2.0",
