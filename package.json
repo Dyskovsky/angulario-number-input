@@ -13,7 +13,7 @@
     "start": "ng serve --host 127.0.0.1",
     "build": "ng build",
     "test": "ng test",
-    "test-ci": "ng test --single-run --no-progress --browsers HeadlessChrome",
+    "test:ci": "ng test --single-run --no-progress --browsers HeadlessChrome",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "gulp": "gulp inline-templates",
@@ -25,7 +25,7 @@
     "build:prod": "ng build --prod"
   },
   "precommit": [
-    "test-ci",
+    "test:ci",
     "build:prod"
   ],
   "files": [
