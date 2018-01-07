@@ -1,5 +1,7 @@
 # angulario-number-input
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Dyskovsky/angulario-number-input.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/Dyskovsky/angulario-number-input.svg?branch=master)](https://travis-ci.org/Dyskovsky/angulario-number-input)
 [![dependencies Status](https://david-dm.org/dyskovsky/angulario-number-input/status.svg)](https://david-dm.org/dyskovsky/angulario-number-input)
 [![devDependencies Status](https://david-dm.org/dyskovsky/angulario-number-input/dev-status.svg)](https://david-dm.org/dyskovsky/angulario-number-input?type=dev)
